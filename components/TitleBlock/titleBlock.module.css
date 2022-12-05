@@ -1,0 +1,23 @@
+.title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 60px 8vw;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background-color: #5cb85c;
+    margin-top: 3px;
+}
+
+.line:first-child {
+    margin-top: 10px;
+}

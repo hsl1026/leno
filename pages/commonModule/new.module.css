@@ -1,0 +1,13 @@
+.content {
+    padding: 50px 0;
+}
+
+.content p {
+    text-indent: 0.9cm;
+}
+
+@media (max-width:850px) {
+    .content {
+        padding: 50px 0;
+    }
+}

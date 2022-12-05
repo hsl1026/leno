@@ -1,0 +1,42 @@
+.home {
+    border: none;
+    background-Color: black;
+    color: white;
+    height: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40px;
+}
+
+.option {
+    display: inline-flex;
+    position: relative;
+}
+
+.option_title {
+    width: 225px;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.delete {
+    color: blue;
+    width: 55px;
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.option_title,
+.delete {
+    line-height: 35px;
+}
