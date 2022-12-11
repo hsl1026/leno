@@ -30,23 +30,25 @@ export const compress = async (base64: any[]) => {
         })
       };
       let compressBlob = await ifCompress(base64[i], 0.8);
-
-      while (Number(compressBlob.size) >= 204800) {
-        console.log(compressBlob.size);
-
+      let a = 0;
+      while (Number(compressBlob.size) >= 204800 && a < 10) {
         compressBlob = await ifCompress(URL.createObjectURL(compressBlob), 0.7);
+        a++
       }
       compressImg.push(compressBlob);
     }
     return compressImg;
   }
+  return null
 };
 
 
 export const replacePath = (content: string, base64: string | any[], compressImgs: any[]) => {
   let htmlContent = content;
-  for (let i = 0; i < base64.length; i++) {
-    htmlContent = htmlContent.replace(base64[i], compressImgs[i]);
+  if (compressImgs.length !== 0) {
+    for (let i = 0; i < base64.length; i++) {
+      htmlContent = htmlContent.replace(base64[i], compressImgs[i]);
+    }
   }
   return htmlContent
 }

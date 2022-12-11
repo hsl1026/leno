@@ -37,6 +37,7 @@ const BraftEditor = () => {
         const result = localStorageGet('password')
         if (result === 123456) {
             setIfFirst(false)
+            document.body.style.overflow = 'hidden'
         }
     }, []);
 

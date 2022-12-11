@@ -4,10 +4,29 @@ import Image from "next/image";
 import Call from '../../images/call.png'
 import Visit from '../../images/visit.png'
 import Email from '../../images/email.png'
+import axios from "axios";
+import { textSendEmail } from '../../api/lenoApi'
 
 export const MainFooter = () => {
-    
+
     const contact = [Call, Visit, Email]
+
+    const sendEmail = (value: any) => {
+        axios({
+            method: "post",
+            url: textSendEmail,
+            data: {
+                'userName': value.Name,
+                'Email': value.Email,
+                'Phone': value.Phone,
+                'Message': value.Message
+            }
+        }).then((res) => {
+            alert(res.data)
+        }).catch(() => {
+            alert('发送失败')
+        })
+    }
 
     return (<div className={`${styles.footer}`}>
         <div className={`container ${styles.from}`} style={{ marginBottom: '80px' }}>
@@ -17,14 +36,14 @@ export const MainFooter = () => {
                 <div className={`${styles.line} col`}></div>
             </div>
 
-            <Form name="nest-messages" size="large" className={`row mt-5 ${styles.formItem}`}>
-                <Form.Item name={'Name'} rules={[{ required: true }]}>
+            <Form onFinish={sendEmail} name="nest-messages" size="large" className={`row mt-5 ${styles.formItem}`}>
+                <Form.Item name={'Name'} rules={[{ required: true, message: 'Please input your name!' }]}>
                     <Input placeholder="Name" />
                 </Form.Item>
-                <Form.Item name={'Email'} rules={[{ type: 'email', required: true }]}>
+                <Form.Item name={'Email'} rules={[{ type: 'email', required: true, message: 'Please input your email!' }]}>
                     <Input placeholder="Email" />
                 </Form.Item>
-                <Form.Item name={'Phone'}>
+                <Form.Item name={'Phone'} rules={[{ required: true, message: 'Please input your phone number!' }]}>
                     <Input placeholder="Phone" />
                 </Form.Item>
                 <Form.Item name={'Message'}>

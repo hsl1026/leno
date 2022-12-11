@@ -6,7 +6,8 @@ import { Dropdown, Select } from 'antd';
 import ArrowUp from '../../images/arrow-up.png'
 import styles from "./topHeader.module.css";
 import Image from 'next/image'
-import Logo from '../../images/bondly.png'
+import Logo from '../../images/leno.png'
+import Logo1 from '../../images/logo.png'
 import Btn from '../../images/btn.png'
 
 interface IMyHeaderState {
@@ -68,14 +69,13 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
 
     //挂载事件监听
     componentDidMount() {
-        window.addEventListener('load', this.changeScrollTopShow);
+        this.changeScrollTopShow()
         window.addEventListener('resize', this.changeScrollTopShow);
         window.addEventListener("scroll", this.changeScrollTopShow);
     }
 
     //卸载事件监听
     componentWillUnmount() {
-        window.removeEventListener('load', this.changeScrollTopShow);
         window.removeEventListener("scroll", this.changeScrollTopShow);
         window.removeEventListener('resize', this.changeScrollTopShow);
     }
@@ -114,7 +114,7 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
             <div>
                 <nav className={`${styles.nav}  container ${changeColor ? styles.back_color : ''}`}>
                     <div className="row align-items-center justify-content-between" style={{ height: '80px' }}>
-                        <Link href={'/'}><Image src={Logo} alt="" width={160} height={60} className='col-auto' /></Link>
+                        <Link href={'/'}><Image src={Logo1} alt="" width={120} height={50} className={`col-auto ${styles.logo}`} /></Link>
                         <div className={`col-auto ${styles.series_select}`}>
                             {btnState ?
                                 <Dropdown menu={{ items }} placement="bottom" className={styles.dropdown_trigger} getPopupContainer={(triggerNode: any) => triggerNode.parentNode}>
