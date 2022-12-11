@@ -5,10 +5,10 @@ import Image from "next/image";
 import { TitleBlock } from '../components/TitleBlock/titleBlock'
 import { BackgroundImg } from '../components/backgroundImg/backgroundImg'
 import backImg from '../images/home-page.webp'
-import floor1 from '../images/floor1.png'
-import floor2 from '../images/floor2.png'
-import floor3 from '../images/floor3.png'
-import floor4 from '../images/floor4.png'
+import floor1 from '../images/floor1.jpg'
+import floor2 from '../images/floor2.jpg'
+import floor3 from '../images/floor3.jpg'
+import floor4 from '../images/floor4.jpg'
 import Head from "next/head";
 
 const image = [floor1, floor2, floor3, floor4]
@@ -60,7 +60,7 @@ const Cookies = () => <>
     </Head>
 
     <main className={styles.main}>
-        <BackgroundImg backgroundImg="/product.png" title="来诺产品" />
+        <BackgroundImg backgroundImg="/product.jpg" title="来诺产品" />
         <div className={styles.product}>
 
             <TitleBlock title='OUR PRODUCT' backgroundColor="#303030" />

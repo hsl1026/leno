@@ -1,7 +1,7 @@
 import styles from './company.module.css'
 import Image from 'next/image'
 import { TitleBlock } from '../TitleBlock/titleBlock'
-import homePage from '../../images/home-page.png'
+import homePage from '../../images/home-page.jpg'
 
 export const MainFooter = () => <div className={`${styles.company}`} id='company'>
     <TitleBlock title='来诺建材介绍' backgroundColor="#303030" />

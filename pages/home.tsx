@@ -10,7 +10,7 @@ const Home = () =>
         <Head>
             <title>来诺建材</title>
         </Head>
-        <BackgroundImg backgroundImg="/home-page.png" title="LENO" />
+        <BackgroundImg backgroundImg="/home-page.jpg" title="LENO" />
         <MainFooter />
         <News />
     </>

@@ -31,7 +31,7 @@ const New = () => {
             <title>来诺建材</title>
         </Head>
         <main>
-            <BackgroundImg backgroundImg="/new.png" title="新闻报道" />
+            <BackgroundImg backgroundImg="/new.jpg" title="新闻报道" />
             <TitleBlock title={newsContent?.title} backgroundColor="#303030" />
             <div className={styles.content}>
                 <div dangerouslySetInnerHTML={{ __html: newsContent?.content }} />

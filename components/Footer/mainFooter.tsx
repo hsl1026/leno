@@ -1,9 +1,9 @@
 import styles from "./mainFooter.module.css";
 import { Button, Form, Input } from 'antd';
 import Image from "next/image";
-import Call from '../../images/call.png'
-import Visit from '../../images/visit.png'
-import Email from '../../images/email.png'
+import Call from '../../images/call.jpg'
+import Visit from '../../images/visit.jpg'
+import Email from '../../images/email.jpg'
 import axios from "axios";
 import { textSendEmail } from '../../api/lenoApi'
 

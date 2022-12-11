@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from "./news.module.css";
 import { TitleBlock } from '../TitleBlock/titleBlock'
-import homePage from '../../images/home-page.png'
+import homePage from '../../images/home-page.jpg'
 import Image from 'next/image'
 import Link from 'next/link';
 import axios from 'axios';
