@@ -28,17 +28,11 @@ function removeDir(dir) {
       let files = fs.readdirSync(dir);
       files.forEach(function (file, index) {
         var curPath = dir + "/" + file;
-        fs.unlink(curPath, function (err) {
-          if (err) throw err;
+        fs.unlinkSync(curPath, function (err) {
+          if (err) reject(err);
         });
       });
-      fs.rmdir(dir, (err) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve("succeed");
-        }
-      });
+      fs.rmdirSync(dir);
     }
   });
 }

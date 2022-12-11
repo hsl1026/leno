@@ -8,7 +8,7 @@ import styles from "./topHeader.module.css";
 import Image from 'next/image'
 import Logo from '../../images/leno.png'
 import Logo1 from '../../images/logo.png'
-import Btn from '../../images/btn.jpg'
+import Btn from '../../images/btn.png'
 
 interface IMyHeaderState {
     isCollapsed: boolean;
