@@ -85,7 +85,7 @@ const Cookies = () => <>
                         tile_flag.map((item, index) => {
                             return <div key={index} className='col-sm-6 col-lg-3 padding-bottom-20'>
                                 <h3>{item.title}</h3>
-                                <p>{item.parameter}</p>
+                                <p style={{ fontSize: '12px' }}>{item.parameter}</p>
                             </div>
                         })
                     }

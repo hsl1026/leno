@@ -20,9 +20,9 @@ export const MainFooter = () => <div className={`${styles.company}`} id='company
         </div>
 
         <div className='row justify-content-center' style={{ height: '37vw', marginTop: '5vw' }}>
-            <video autoPlay loop muted style={{ padding: '0' }}>
-                <source src='/Little.mp4' />
+            <video autoPlay loop muted style={{ padding: '0', width: '100%', height: '100%' }}>
+                <source src='https://server.myth.art/new-myth/videos/myth-pass.mp4' type="video/mp4" />
             </video>
         </div>
     </div>
-</div>
+</div >
