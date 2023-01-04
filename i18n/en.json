@@ -1,0 +1,49 @@
+{
+  "header": {
+    "series1": "floor",
+    "series2": "Solid wood flooring",
+    "series3": "fence",
+    "series4": "Solid wood fence"
+  },
+  "logo": "LENO",
+  "introduce": {
+    "title": "Introduction to Lainuo Building Materials",
+    "content": "Der Del flooring is the core of the flooring material industry under Del Future Technology Holding Group (listed in Shenzhen Stock Exchange, stock code 002631), and also a leading flooring brand in China. Del has a leading production scale in the Asia Pacific region. It has set up production bases in Jiangsu, Sichuan and Liaoning respectively to achieve the 'Golden Triangle' production layout, and set up overseas forest processing and production manufacturing bases in Indonesia. Del adopts world-class production lines from Germany, Italy, the Netherlands, Japan and other countries, and has established a leading wood research institute in the industry. At present, he has mastered more than 100 key technologies and participated in drafting a number of national standards for the flooring industry. The survey results of Euromonitor International in 2020 show that Del aldehyde free flooring sales are in the leading position in China. As a supplier of home decoration and public decoration flooring for the Beijing Olympic Games and a designated flooring supplier for the Chinese Arctic and Antarctic Scientific Research Station, Del currently serves as the vice chairman unit of the China Forest Products Industry Association and the director unit of China Quality Wanlixing. The products have passed the ISO9000 quality system certification, ISO14001 environmental system certification, and China environmental label certification."
+  },
+  "news": {
+    "newTitle": "OUR NEWS",
+    "more": "Read more→",
+    "title": "News report"
+  },
+  "contact": "CONTACT US",
+
+  "product": {
+    "productTitle": "Leno products",
+    "title": "OUR PRODUCT",
+    "img": "Product pictures",
+    "introduction": "Product introduction",
+    "color": "colour",
+    "style": "Best style",
+    "Specifications": "Specifications",
+    "origin": "country of origin",
+    "grade": "Environmental protection grade",
+    "material": "base material",
+    "LatchNotch": "Latch notch",
+    "technology": "Surface technology",
+    "features": "Product features",
+    "space": "Applicable space",
+
+    "product1": {
+      "color": "Dark brown",
+      "style": "Luxury, European style, modern simplicity, new Chinese style, Nordic style",
+      "Specifications": "1383*193*8mm",
+      "origin": "Salzburg, Austria",
+      "grade": "EU E1 level",
+      "material": "High density substrate made of Alpine spruce wood fiber",
+      "LatchNotch": "4V notch",
+      "technology": "Unique PO super smooth surface, perfect luster",
+      "features": "KAINDL classic appearance design, simple art relief surface",
+      "space": "Except the bathroom and kitchen, the whole room can be paved"
+    }
+  }
+}

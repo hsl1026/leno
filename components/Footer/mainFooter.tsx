@@ -6,9 +6,10 @@ import Visit from '../../images/visit.jpg'
 import Email from '../../images/email.jpg'
 import axios from "axios";
 import { textSendEmail } from '../../api/lenoApi'
+import { useTranslation } from 'react-i18next'
 
 export const MainFooter = () => {
-
+    const { t } = useTranslation()
     const contact = [Call, Visit, Email]
 
     const sendEmail = (value: any) => {
@@ -30,7 +31,7 @@ export const MainFooter = () => {
 
     return (<div className={`${styles.footer}`}>
         <div className={`container ${styles.from}`} style={{ marginBottom: '80px' }}>
-            <h1 className='row' style={{ color: 'black', fontWeight: '900' }}>CONTACT US</h1>
+            <h1 className='row' style={{ color: 'black', fontWeight: '900' }}>{t('contact')}</h1>
             <div className='row-col-1'>
                 <div className={`${styles.line} col`}></div>
                 <div className={`${styles.line} col`}></div>

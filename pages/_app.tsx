@@ -2,6 +2,7 @@ import '../styles/styles.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Script from 'next/script'
 import '../images/font/iconfont.css'
+import '../i18n/config'
 
 import type { AppProps } from 'next/app'
 import { MainLayout } from "../components/Layout";

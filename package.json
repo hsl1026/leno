@@ -19,11 +19,13 @@
     "canvas": "^2.9.1",
     "express": "^4.18.2",
     "formidable": "^2.0.1",
+    "i18next": "^22.4.7",
     "mysql": "^2.18.1",
     "next": "12.2.2",
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.1.1"
   },
   "devDependencies": {
     "@types/mysql": "^2.15.21",

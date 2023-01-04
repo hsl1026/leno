@@ -6,9 +6,10 @@ import { Dropdown, Select } from 'antd';
 import ArrowUp from '../../images/arrow-up.jpg'
 import styles from "./topHeader.module.css";
 import Image from 'next/image'
-import Logo from '../../images/leno.png'
 import Logo1 from '../../images/logo.png'
 import Btn from '../../images/btn.png'
+import { withTranslation, WithTranslation } from "react-i18next"
+import i18n from 'i18next';
 
 interface IMyHeaderState {
     isCollapsed: boolean;
@@ -18,8 +19,8 @@ interface IMyHeaderState {
     btnState: boolean;
 }
 
-class TopHeader extends React.Component<{}, IMyHeaderState> {
-    constructor(props: {}, state: IMyHeaderState) {
+class TopHeader extends React.Component<WithTranslation, IMyHeaderState> {
+    constructor(props: WithTranslation, state: IMyHeaderState) {
         super(props);
         //show为true时回到顶部按钮显示，false时隐藏
         this.state = {
@@ -80,9 +81,14 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
         window.removeEventListener('resize', this.changeScrollTopShow);
     }
 
+    handleChange = (value: string) => {
+        i18n.changeLanguage(value);
+    }
+
     render() {
+        const { t } = this.props;
         const { showBackTop, changeColor, btnState } = this.state;
-        const series = ['floor', 'Solid wood flooring', 'fence', 'Solid wood fence']
+        const series = [t('header.series1'), t('header.series2'), t('header.series3'), t('header.series4')]
         const items: MenuProps['items'] = [
             {
                 label: (
@@ -114,7 +120,7 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
             <div>
                 <nav className={`${styles.nav}  container ${changeColor ? styles.back_color : ''}`}>
                     <div className="row align-items-center justify-content-between" style={{ height: '80px' }}>
-                        <Link href={'/'}><Image src={Logo1} alt="" width={120} height={70} className={`col-auto ${styles.logo}`} /></Link>
+                        <Link href={'/'}><Image src={Logo1} alt="" width={100} height={50} className={`col-auto ${styles.logo}`} /></Link>
                         <div className={`col-auto ${styles.series_select}`}>
                             {btnState ?
                                 <Dropdown menu={{ items }} placement="bottom" className={styles.dropdown_trigger} getPopupContainer={(triggerNode: any) => triggerNode.parentNode}>
@@ -127,17 +133,18 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
                             }
 
                             <Select
-                                defaultValue="CN"
+                                defaultValue="zh"
+                                onChange={this.handleChange}
                                 className={styles.language_selector}
                                 getPopupContainer={triggerNode => triggerNode.parentNode}
                                 options={[
                                     {
-                                        value: 'CN',
-                                        label: 'CN',
+                                        value: 'zh',
+                                        label: 'zh',
                                     },
                                     {
-                                        value: 'EN',
-                                        label: 'EN',
+                                        value: 'en',
+                                        label: 'en',
                                     }
                                 ]}
                             />
@@ -178,4 +185,4 @@ class TopHeader extends React.Component<{}, IMyHeaderState> {
     }
 }
 
-export default TopHeader;
+export default withTranslation()(TopHeader);
