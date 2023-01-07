@@ -192,8 +192,8 @@ class Editor extends React.Component<{}, EditorState> {
                                 <div className={styles.btn}>
                                     <Link href={'/'}><button className={styles.home}>返回首页</button></Link>
                                     <div style={{ marginLeft: '30px', display: 'inline-flex', alignItems: 'center' }}>
-                                        <Form.Item style={{ width: '30vw' }} name="title" rules={[{ required: true, message: '请输入标题!' }]}>
-                                            <Input size="middle" placeholder="请输入标题" allowClear />
+                                        <Form.Item style={{ width: '30vw' }} name="title" rules={[{ required: true, message: '请输入新闻标题!' }]}>
+                                            <Input size="middle" placeholder="请输入新闻标题" allowClear />
                                         </Form.Item>
                                         <Form.Item style={{ width: '20vw', marginLeft: '20px' }} name="newImg" label="封面图：" rules={[{ required: true, message: '请选择新闻封面图!' }]} >
                                             <Input size="middle" type="file" style={{ border: 'none' }} onChange={(e) => this.uploadData(e)} />
@@ -219,8 +219,8 @@ class Editor extends React.Component<{}, EditorState> {
                                                 }
                                             </Select>
                                         </Form.Item>
-                                        <Form.Item style={{ width: '70px', position: 'absolute', right: '0', top: '0' }}>
-                                            <Button size="middle" type="primary" htmlType="submit">提交</Button>
+                                        <Form.Item style={{ width: '100px', position: 'absolute', right: '0', top: '0' }}>
+                                            <Button size="middle" type="primary" htmlType="submit">提交新闻</Button>
                                         </Form.Item>
                                     </div>
                                 </div>
