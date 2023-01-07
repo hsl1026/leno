@@ -195,10 +195,10 @@ class Editor extends React.Component<{}, EditorState> {
                                         <Form.Item style={{ width: '30vw' }} name="title" rules={[{ required: true, message: '请输入标题!' }]}>
                                             <Input size="middle" placeholder="请输入标题" allowClear />
                                         </Form.Item>
-                                        <Form.Item style={{ width: '20vw' }} name="newImg" label="封面图：" rules={[{ required: true, message: '请选择新闻封面图!' }]} >
+                                        <Form.Item style={{ width: '20vw', marginLeft: '20px' }} name="newImg" label="封面图：" rules={[{ required: true, message: '请选择新闻封面图!' }]} >
                                             <Input size="middle" type="file" style={{ border: 'none' }} onChange={(e) => this.uploadData(e)} />
                                         </Form.Item>
-                                        <Form.Item>
+                                        <Form.Item style={{ marginLeft: '20px' }}>
                                             <Select
                                                 style={{ width: 300 }}
                                                 allowClear
@@ -219,7 +219,7 @@ class Editor extends React.Component<{}, EditorState> {
                                                 }
                                             </Select>
                                         </Form.Item>
-                                        <Form.Item style={{ width: '70px' }}>
+                                        <Form.Item style={{ width: '70px', position: 'absolute', right: '0', top: '0' }}>
                                             <Button size="middle" type="primary" htmlType="submit">提交</Button>
                                         </Form.Item>
                                     </div>
