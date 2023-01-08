@@ -6,6 +6,16 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'server.myth.art',
+        port: '',
+        pathname: '/newsImg/**/**',
+      },
+    ],
+  },
 };
 
 module.exports = { nextConfig };

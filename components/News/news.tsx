@@ -21,6 +21,8 @@ export const News = () => {
         })()
     }, []);
 
+    const src = (img: string) => { return img }
+
     return (
         <>
             {newData.length !== 0 ? <div className={styles.news}>
@@ -32,7 +34,7 @@ export const News = () => {
                                 <Link href={`/new/${item.id}`} key={index}>
                                     <div className={styles.boxNew}>
                                         <div className={`${styles.newBox}`}>
-                                            <div className={`col ${styles.new_img}`}><Image src={homePage} alt='' layout='fill' objectFit='cover' /></div>
+                                            <div className={`col ${styles.new_img}`}><Image loader={() => src(item.Img)} src={item.Img} alt='' layout='fill' objectFit='cover' /></div>
                                             <div className={`col ${styles.content}`}>
                                                 <p>{item.title}</p>
                                                 <p className={styles.more} style={{ marginBottom: '2px', color: 'green' }}>{t('news.more')}</p>
