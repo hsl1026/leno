@@ -94,14 +94,14 @@ class Editor extends React.Component<{}, EditorState> {
                 }
             }).then(() => {
                 alert('添加成功')
-                this.setState({ loading: false })
                 window.location.reload()
             }).catch((err) => {
                 console.log('错误' + err)
-                this.setState({ loading: false })
             })
         }).catch((err) => {
             console.log('错误' + err)
+
+        }).finally(() => {
             this.setState({ loading: false })
         })
     }
@@ -161,20 +161,26 @@ class Editor extends React.Component<{}, EditorState> {
                 }
             }).then((res) => {
                 alert(res.data)
-                this.setState({ loading: false })
                 window.location.reload()
             }).catch((err) => {
                 console.log('错误' + err)
-                this.setState({ loading: false })
             })
         }).catch((err) => {
             console.log('错误' + err)
+
+        }).finally(() => {
             this.setState({ loading: false })
         })
     }
 
+    pageRefresh = () => {   
+        setTimeout(
+            () => window.location.reload(), 0
+        )
+    }
+
     render() {
-        const { loading, optionTitle, ifModalOpen, newId, coverImg } = this.state
+        const { loading, optionTitle, ifModalOpen, newId } = this.state
         const { formRef } = this;
         //限制字数
         const LIMIT = 5000;
@@ -190,7 +196,7 @@ class Editor extends React.Component<{}, EditorState> {
                         <>
                             <Form onFinish={this.handleSubmit} ref={formRef}>
                                 <div className={styles.btn}>
-                                    <Link href={'/'}><button className={styles.home}>返回首页</button></Link>
+                                    <Link href={'/'}><button className={styles.home} onClick={this.pageRefresh}>返回首页</button></Link>
                                     <div style={{ marginLeft: '30px', display: 'inline-flex', alignItems: 'center' }}>
                                         <Form.Item style={{ width: '30vw' }} name="title" rules={[{ required: true, message: '请输入新闻标题!' }]}>
                                             <Input size="middle" placeholder="请输入新闻标题" allowClear />

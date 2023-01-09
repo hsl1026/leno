@@ -25,6 +25,7 @@ const New = () => {
                 setNewsContent(res.data[0])
             })
 
+            document.body.scrollTop = 0;
         })()
     }, [router.query.id]);
 

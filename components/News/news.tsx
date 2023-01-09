@@ -16,8 +16,9 @@ export const News = () => {
         (async function () {
             await axios.get(textNewsBox).then((res) => {
                 setNewData(res.data)
+            }).catch(err => {
+                console.log(err);
             })
-
         })()
     }, []);
 
